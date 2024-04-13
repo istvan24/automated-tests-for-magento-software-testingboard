@@ -60,6 +60,7 @@ public class SizeFilterTest extends BaseTest {
 
         String sizeToFilter = "XL";
 
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         WebElement sizeFilterElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='filter-options-title'][text()='Size']")));

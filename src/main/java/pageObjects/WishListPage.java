@@ -16,10 +16,9 @@ public class WishListPage extends BasePage {
         super();
     }
 
-    @Override
+    /*@Override
     public void waitForPageToLoad() {
-
-    }
+    }*/
 
     public boolean isProductWishListMsgDisplayed() {
         return productWishlistSuccesMsg.isDisplayed();

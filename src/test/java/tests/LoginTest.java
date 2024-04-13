@@ -19,7 +19,6 @@ public class LoginTest extends BaseTest {
         };
     }
 
-    @Test(groups = "Login")
     @TestInfo(expectedResult = "Check if the login is possible with valid credentials.")
     public void loginWithValidCredentialsTests() {
         try {

@@ -26,13 +26,13 @@ public class SignInPage extends BasePage{
         super();
     }
 
-
+/*
     @Override
     public void waitForPageToLoad() {
         emailField = (WebElement) wait.until(ExpectedConditions.visibilityOf(emailField));
         passwordField = (WebElement) wait.until(ExpectedConditions.visibilityOf(passwordField));
         signInButton = (WebElement) wait.until(ExpectedConditions.visibilityOf(signInButton));
-    }
+    }*/
 
     public LandingPage login(String email, String password) {
         fillEmailField(email);
@@ -54,7 +54,7 @@ public class SignInPage extends BasePage{
     public void clickSignInButton() {
         signInButton.click();
     }
-
+/*
     public String getUsernameErr() {
         return getErrorMsg("user");
     }
@@ -70,6 +70,6 @@ public class SignInPage extends BasePage{
     private String getErrorMsg(String type) {
         return wait.until(
                 ExpectedConditions.presenceOfElementLocated(
-                        By.xpath("//div[@id='" + type + "error']"))).getText();
-    }
+                        By.xpath("//div[@id='" + type + "-error']"))).getText();
+    }*/
 }

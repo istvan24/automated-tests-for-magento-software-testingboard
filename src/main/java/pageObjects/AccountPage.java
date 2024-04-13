@@ -18,9 +18,9 @@ public class AccountPage extends BasePage{
         super();
     }
 
-    @Override
+    /*@Override
     public void waitForPageToLoad() {
-    }
+    }*/
 
     public AddressPage clickAddressBookButton() {
         addressBookButton.click();

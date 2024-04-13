@@ -17,15 +17,22 @@ public class WishlistTest extends BaseTest {
         landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
     }
 
-    @Test(groups = "add.products.to.wishlist")
+    @Test
     @TestInfo(expectedResult = "Random product is succesfully added to the wishlist.")
     public void addRandomProductToWishlistTest() {
-        StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);
-        WishListPage wishlistPage = storePage.goToProductPage(RANDOM).wishListProduct();
-        Assert.assertTrue(wishlistPage.isProductWishListMsgDisplayed());
+        try {
+            StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);
+            WishListPage wishlistPage = storePage.goToProductPage(RANDOM).wishListProduct();
+            Assert.assertTrue(wishlistPage.isProductWishListMsgDisplayed());
+        } catch (Throwable e) {
+            takeScreenshot();
+            throw e;
+        } finally {
+            driver.quit();
+        }
     }
 
-    @Test(groups = "add.products.to.wishlist")
+    @Test
     @TestInfo(expectedResult = "Check if a product from landing page is successfully added to wishlist.")
     public void addProductToWishlistTest() {
         try {
@@ -49,13 +56,13 @@ public class WishlistTest extends BaseTest {
         //hover here!!!
 
     }*/
-    @Test(groups = "add.product.to.cart.from.wishlist")
+    @Test
     @TestInfo(expectedResult = "Check if a product is added to cart via add all to cart button from wishlist page.")
     public void addProductToCartFromWishListTest() {
         try {
             AccountPage accountPage = landingPage.clickMyAccountButton();
             WishListPage wishListPage = accountPage.clickMyWishListButton();
-        //TBD
+            //TBD
 
         } catch (Throwable e) {
             takeScreenshot();

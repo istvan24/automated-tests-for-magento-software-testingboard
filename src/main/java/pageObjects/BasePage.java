@@ -65,5 +65,5 @@ public abstract class BasePage {
         return driver.findElement(locator);
     }
 
-    public abstract void waitForPageToLoad();
+    //public abstract void waitForPageToLoad();
 }

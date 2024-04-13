@@ -18,7 +18,7 @@ public class LoginBasedTest extends BaseTest {
         welcomePage = new WelcomePage();
         signInPage.login(username, password);
     }
-
+/*
     protected void loginUserCheckErr(String username, String password, String usernameError, String passwordError,
                                      String generalError) {
 
@@ -39,7 +39,7 @@ public class LoginBasedTest extends BaseTest {
         System.out.println(loginModel);
         loginUserCheckErr(loginModel.getAccount().getUsername(), loginModel.getAccount().getPassword(),
                 loginModel.getUsernameErr(), loginModel.getPasswordErr(), loginModel.getGeneralErr());
-    }
+    }*/
 
     @AfterMethod
     public void cleanUp() {

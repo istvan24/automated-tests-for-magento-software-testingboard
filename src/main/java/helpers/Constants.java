@@ -7,7 +7,7 @@ public class Constants {
     public static final String BROWSER = System.getProperty("browser", "chrome");
     public static final String WEBPAGE = "https://magento.softwaretestingboard.com/";
     public static final String VALIDEMAIL = "fabianestefan31@gmail.com";
-    public static final String VALIDPASSWORD = "n6LfBFsXKi9ks@i!";
+    public static final String VALIDPASSWORD = "n6LfBFsXKi9ks@i";
     public static final String EMPTYDEMAIL = "";
     public static final String EMPTYPASSWORD = "";
     public static final String REMOTE = System.getProperty("remote");
