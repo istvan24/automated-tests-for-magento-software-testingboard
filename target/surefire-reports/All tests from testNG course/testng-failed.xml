@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All tests from testNG course]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Regression(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="G1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="loginWithInvalidUsernameTest"/>
+          <include name="loginWithValidCredentialsTests"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [All tests from testNG course] -->
