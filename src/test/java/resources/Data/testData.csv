@@ -1,0 +1,5 @@
+username,password,usernameErr,passwordErr,generalErr
+,,Please enter your username,Please enter your password,,
+test,,,Please enter your password,,
+,password,Please enter your username,,,
+test,password,,,Invalid username or password!

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.13 s <<< FAILURE! - in TestSuite
+loginWithInvalidUsernameTest(tests.LoginTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "tests.LoginTest.driver" is null
+	at tests.LoginTest.loginWithInvalidUsernameTest(LoginTest.java:48)
+
+loginWithValidCredentialsTests(tests.LoginTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "tests.LoginTest.driver" is null
+	at tests.LoginTest.loginWithValidCredentialsTests(LoginTest.java:32)
+

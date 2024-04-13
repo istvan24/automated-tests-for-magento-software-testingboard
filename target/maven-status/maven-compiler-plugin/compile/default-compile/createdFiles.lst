@@ -1,0 +1,16 @@
+pages\BasePage.class
+driver\BrowserCapabilities.class
+pages\ProductPage.class
+pages\LoginPage.class
+pages\WishListPage.class
+pages\CartPage.class
+pages\AddressPage.class
+pages\RegisterPage.class
+helpers\Constants.class
+pages\StorePage.class
+pages\NavigationBar.class
+pages\LandingPage.class
+pages\WelcomePage.class
+pages\AccountPage.class
+helpers\Address.class
+driver\WebDriverSingleton.class
