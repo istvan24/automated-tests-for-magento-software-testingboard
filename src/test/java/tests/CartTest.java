@@ -1,8 +1,6 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.CartPage;
 import pageObjects.StorePage;
@@ -13,14 +11,9 @@ import static helpers.Constants.*;
 
 public class CartTest extends BaseTest {
 
-    /*@BeforeTest
-    public static void accessAccount() {
-        landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
-    }*/
-
     @Test
     //Check if a product from wishlist page is added to cart via add all to cart button.
-    public void addProductToCartTest() {
+    public void addProductFromWishListToCartTest() {
         try {
             StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);
             WishListPage wishlistPage = storePage.goToProductPage(RANDOM).wishListProductWithRandomSizeAndColor();

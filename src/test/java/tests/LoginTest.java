@@ -3,8 +3,6 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pageObjects.LoginPage;
-
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
 public class LoginTest extends BaseTest {

@@ -21,14 +21,6 @@ public class LoginPage extends BasePage{
         super();
     }
 
-/*
-    @Override
-    public void waitForPageToLoad() {
-        emailField = (WebElement) wait.until(ExpectedConditions.visibilityOf(emailField));
-        passwordField = (WebElement) wait.until(ExpectedConditions.visibilityOf(passwordField));
-        signInButton = (WebElement) wait.until(ExpectedConditions.visibilityOf(signInButton));
-    }*/
-
     public LandingPage login(String email, String password) {
         fillEmailField(email);
         fillPasswordField(password);
