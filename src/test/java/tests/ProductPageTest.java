@@ -1,15 +1,13 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.StorePage;
 
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
-public class ProductPageNegativeTest extends BaseTest {
+public class ProductPageTest extends BaseTest {
 
     @BeforeTest
     public static void accesAccount() {

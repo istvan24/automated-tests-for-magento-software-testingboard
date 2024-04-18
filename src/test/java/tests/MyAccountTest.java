@@ -2,21 +2,19 @@ package tests;
 
 import helpers.Address;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.AccountPage;
 import pageObjects.AddressPage;
 
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
-public class NewAddressTest extends BaseTest {
+public class MyAccountTest extends BaseTest {
 
-    @BeforeTest
+   /* @BeforeTest
     public static void accessAccount() {
         landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
-    }
+    }*/
 
     @Test
     //"Check if new address is successfully added"

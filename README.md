@@ -26,33 +26,41 @@ information, default browser, etc
 2. Fill required fields.
 3. Click Create an account button.
 
-### Test case nr 2: Test the warning messages from create new account page
-1. Go to login page `https://magento.softwaretestingboard.com/customer/account/create/`
-2. Leave empty the required fields.
-3. Click Create an account button.
-4. Check the warning messages below the mandatory fields.
-
-### Test case nr 3: Login into an existent account
+### Test case nr 2: Login into an existent account
 1. Go to login page 'https://magento.softwaretestingboard.com/customer/account/login/'
 2. Fill required fields with an existent users credentials.
 3. Click on Sign in button.
 4. Check the "Welcome + username!" text after the success login.
 
-### Test case nr 4: Check the warning messages from login page
+### Test case nr 3: Check the warning messages from login page
 1. Go to login page 'https://magento.softwaretestingboard.com/customer/account/login/'
 2. Leave empty the warning fields.
 3. Click on Sign in button.
 4. Check the warning messages below the mandatory fields.
 
-### Test case nr 5: Test the add products to Wishlist functionality
+### Test case nr 4: Test the add products to Wishlist functionality
 1. Login with valid credentials.
 2. Go to a page with clothes.
 3. Go to any product detail page and click Add to Wishlist button.
-Expected result: Product was added to Wishlist
+Expected result: Product was added to Wishlist.
 
 ### Tets case nr 5: Test the add products to cart functionality
 1. Login
-2. Go to a page with clothes
-3. Add 3 different products to cart
-4. Go to shopping cart
-Expected result: Products were added to cart
+2. Go to a page with clothes.
+3. Add 3 different products to cart.
+4. Go to shopping cart.
+Expected result: Products were added to cart.
+
+### Tets case nr 6: Test the add new address on the My account page
+1. Login
+2. Go to My account page.
+3. Add a new address using the javafaker library. 
+4. Check if the message-success appears.
+Expected result: New address is succefully added.
+
+### Tets case nr 7: Test the Sizefilter on a category page
+1. Login
+2. Go to My account page.
+3. Add a new address using the javafaker library.
+4. Check if the message-success appears.
+   Expected result: New address is succefully added.

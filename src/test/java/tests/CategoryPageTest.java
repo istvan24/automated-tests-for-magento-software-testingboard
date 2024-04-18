@@ -5,17 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
 
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
-public class SizeFilterTest extends BaseTest {
+public class CategoryPageTest extends BaseTest {
 
     @BeforeTest
     public static void accesAccount() {
@@ -24,7 +22,7 @@ public class SizeFilterTest extends BaseTest {
 
     @Test
     //"Check if size filter is working on a product page."
-    public void verifySizeFilterOnProductPageTest() {
+    public void verifySizeFilterOnCategoryPageTest() {
         try {
 
             driver.get(MENJACKETS_URL);

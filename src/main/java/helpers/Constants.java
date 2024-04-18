@@ -19,4 +19,7 @@ public class Constants {
     public static final String SCREENSHOT_FILE = "target\\surefire-reports" +
             "\\screenshot";
 
+    public static final String API_CONFIG_FILE = "src\\test\\resources\\apiConfig.properties";
+
+
 }

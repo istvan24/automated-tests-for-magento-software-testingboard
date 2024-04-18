@@ -5,8 +5,9 @@ import driver.WebDriverSingleton;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 import pageObjects.LandingPage;
 
@@ -15,6 +16,8 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static driver.WebDriverSingleton.closeBrowserAtEnd;
+import static helpers.Constants.VALIDEMAIL;
+import static helpers.Constants.VALIDPASSWORD;
 
 public class BaseTest {
 
@@ -23,13 +26,19 @@ public class BaseTest {
     protected static LandingPage landingPage;
     private int screenshotIndex = 0;
 
-    @BeforeSuite
+    @BeforeMethod
     public static void setupDriver() {
         driver = WebDriverSingleton.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         landingPage = new LandingPage();
         landingPage.openLandingPage();
+        landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
+    }
+
+    @AfterMethod
+    public void cleanUpAfterTest() {
+        closeBrowserAtEnd();
     }
 
     //take Screenshoot for failed test and save them to the target folder
@@ -48,9 +57,6 @@ public class BaseTest {
         screenshotIndex++;
     }
 
-    @AfterTest
-    public void cleanUpAfterTest() {
-        closeBrowserAtEnd();
-    }
+
 
 }

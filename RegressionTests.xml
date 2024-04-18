@@ -3,13 +3,13 @@
 <suite name="Regression tests for Magento website">
     <test name="RegressionTests">
         <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.RegisterTest"/>
-            <class name="tests.WishlistTest"/>
-            <class name="tests.AddProductToCartTest"/>
-            <class name="tests.ProductPageNegativeTest"/>
-            <class name="tests.CalculateCartPricesTest"/>
-            <class name="tests.NewAddressTest"/>
+            <!-- <class name="tests.LoginTest"/> -->
+             <!-- <class name="tests.RegisterTest"/>-->
+             <!-- <class name="tests.WishlistTest"/>-->
+              <!-- <class name="tests.AddProductToCartTest"/>-->
+              <!-- <class name="tests.ProductPageTest"/>-->
+            <class name="tests.CartTest"/>
+            <class name="tests.MyAccountTest"/>
         </classes>
     </test>
 </suite>

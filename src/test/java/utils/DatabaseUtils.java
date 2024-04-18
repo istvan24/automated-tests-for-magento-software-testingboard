@@ -28,6 +28,4 @@ public class DatabaseUtils {
         return connection.createStatement();
     }
 }
-
-
 */

@@ -20,7 +20,5 @@ public class LoginTest extends BaseTest {
             takeScreenshot();
             throw e;
         }
-
     }
-
 }
