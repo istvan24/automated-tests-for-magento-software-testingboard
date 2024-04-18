@@ -8,19 +8,28 @@ public class WishListPage extends BasePage {
     @FindBy(className = "message-success")
     private WebElement productWishlistSuccesMsg;
 
-    //xpath -> //button[@title='Add All to Cart']
     @FindBy(css = "button[title='Add All to Cart']")
-    private WebElement addAllToCart;
+    private WebElement addAllToCartButton;
+
+    @FindBy(xpath = "//div[@class='message-success success message']")
+    private static WebElement productFromWishlistToCartSuccessMessage;
+
 
     public WishListPage() {
         super();
     }
 
-    /*@Override
-    public void waitForPageToLoad() {
-    }*/
+    public boolean isProductFromWishListToCartSuccessMsgDisplayed() {
+        return productFromWishlistToCartSuccessMessage.isDisplayed();
+    }
 
     public boolean isProductWishListMsgDisplayed() {
         return productWishlistSuccesMsg.isDisplayed();
     }
+
+    public void clickAddAllToCartBtn() {
+        addAllToCartButton.click();
+    }
+
+
 }

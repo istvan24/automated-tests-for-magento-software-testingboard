@@ -1,7 +1,6 @@
 package tests;
 
-import com.pitechplus.qautils.annotations.TestInfo;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.CartPage;
@@ -9,16 +8,15 @@ import pageObjects.StorePage;
 
 import static helpers.Constants.*;
 
-public class PositiveCartTest extends BaseTest {
+public class CalculateCartPricesTest extends BaseTest {
 
     @BeforeClass
     public static void accessAccount() {
-
         landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
     }
 
     @Test
-    @TestInfo(expectedResult = "Check if cart pricing:Product subtotal, Total is accurately calculated")
+    //"Check if cart pricing:Product subtotal, Total is accurately calculated"
     public void cartPricingTest() {
         try {
         int productQuantity = 3;
@@ -36,13 +34,11 @@ public class PositiveCartTest extends BaseTest {
         } catch (Throwable e) {
             takeScreenshot();
             throw e;
-        } finally {
-            driver.quit();
         }
     }
 
     @Test
-    @TestInfo(expectedResult = "Check if given number of products are successfully added to cart")
+    //"Check if given number of products are successfully added to cart"
     public void productAddedSuccesfullyToCartTest() {
         try {
         int addedQuantity = 3;
@@ -58,10 +54,5 @@ public class PositiveCartTest extends BaseTest {
         } finally {
             driver.quit();
         }
-    }
-
-    @AfterTest
-    public void goBackToLanding() {
-        landingPage.openLandingPage();
     }
 }

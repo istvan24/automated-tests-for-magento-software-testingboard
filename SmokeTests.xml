@@ -3,11 +3,9 @@
 <suite name="Smoke tests for Magento website">
     <test name="SmokeTests">
         <classes>
-            <!--<class name="tests.LoginTest"/>-->
+            <class name="tests.LoginTest"/>
             <class name="tests.RegisterTest"/>
-            <class name="tests.WishlistTest"/>
-            <class name="tests.NegativeProductPageTests"/>
-
+            <!--<class name="tests.WishlistTest"/> -->
         </classes>
-    </test>
+</test>
 </suite>

@@ -1,0 +1,15 @@
+tests\ProductPageNegativeTest.class
+tests\AddProductToCartTest.class
+tests\WishlistTest.class
+utils\ConfigUtils.class
+tests\BaseTest.class
+tests\SizeFilterTest.class
+tests\LoginTest.class
+utils\ConstantUtils.class
+tests\LoginBasedTest.class
+tests\RegisterTest.class
+tests\NewAddressTest.class
+tests\LoginDataSourceTests.class
+tests\CalculateCartPricesTest.class
+utils\CSVUtils.class
+tests\LoginNegativeTest.class

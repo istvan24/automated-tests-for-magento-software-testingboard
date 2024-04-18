@@ -26,14 +26,6 @@ public class ProductPage extends BasePage{
     @FindBy(xpath = "//li[contains(@class, 'item category')][last()]/a")
     private WebElement categoryBtn;
 
-    //warning message for size
-    @FindBy(xpath = "//div[@id='super_attribute[143]-error")
-    private WebElement warningMessageForSize;
-
-    //warning message for color
-    @FindBy(xpath = "//div[@id='super_attribute[93]-error")
-    private WebElement warningMessageForColor;
-
     //constructor for ProductPage + initializes a Random object for potential use within the ProductPage class.
     public ProductPage() {
         super();
@@ -42,6 +34,13 @@ public class ProductPage extends BasePage{
 
     //click on Wishlist button
     public WishListPage wishListProduct() {
+        toWishlistBtn.click();
+        return new WishListPage();
+    }
+
+    public WishListPage wishListProductWithRandomSizeAndColor() {
+        chooseRandomSize();
+        chooseRandomColor();
         toWishlistBtn.click();
         return new WishListPage();
     }

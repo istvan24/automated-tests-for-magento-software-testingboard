@@ -1,12 +1,11 @@
 package tests;
 
 import ObjectModels.LoginModel;
-import com.opencsv.exceptions.CsvException;
-import dataProviders.DBDataProviders;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.CSVUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,18 +14,39 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 public class LoginDataSourceTests extends BaseTest {
 
     String browser = "chrome";
+
+    /* ############################################## JSON #############################################################  */
+
+    @DataProvider(name = "jsonDP")
+    public Iterator<Object[]> jsonDpCollection() throws IOException {
+        Collection<Object[]> dp = new ArrayList<>();
+//      here we will start deserialization of json into LoginModel obj
+        ObjectMapper objectMapper = new ObjectMapper();
+        File file = new File("src\\test\\resources\\Data\\testData.json");
+
+        LoginModel[] lmList = objectMapper.readValue(file, LoginModel[].class);
+
+        for (LoginModel lm : lmList)
+            dp.add(new Object[]{lm});
+
+        return dp.iterator();
+    }
+
+    @Test(dataProvider = "jsonDP")
+    public void loginWithJsonAsDataSource(LoginModel lm) {
+        loginWithLoginModel(lm, browser);
+    }
 
     /* ############################################## SQL (MySQL) ###########################################################  */
 
     @DataProvider(name = "sqlDP")
     public Iterator<Object[]> sqlDpCollection() throws Exception {
         Collection<Object[]> dp = new ArrayList<>();
-        // define DB connection details -> to do -> we need to move this info inside config files in future
+
         String dbHostname = "localhost";
         String dbUser = "root";
         String dbPassword = "root";
@@ -58,31 +78,4 @@ public class LoginDataSourceTests extends BaseTest {
 
     private void loginWithLoginModel(LoginModel lm, String browser) {
     }
-
-    /* ############################################## CSV ###########################################################  */
-
-    @DataProvider(name = "csvDP")
-    public Iterator<Object[]> csvDpCollection() throws IOException, CsvException {
-        Collection<Object[]> dp = new ArrayList<>();
-
-        List<String[]> csvData = CSVUtils.readCsv("src\\test\\resources\\Data\\testData.csv");
-
-        //we create legend
-        int usernamePoz = 0, passwordPoz = 1, usernameErrPoz = 2, passwordErrPoz = 3, generalErrPoz = 4;
-
-        //we have header on csv, in this case we will drop first line
-        for (int i = 1; i < csvData.size(); i++) {
-            String[] line = csvData.get(i);
-            LoginModel lm = new LoginModel(line[usernamePoz], line[passwordPoz], line[usernameErrPoz],
-                    line[passwordErrPoz], line[generalErrPoz]);
-            dp.add(new Object[]{lm});
-        }
-        return dp.iterator();
-    }
-
-    @Test(dataProvider = "csvDP")
-    public void loginWithCSVAsDataSource(LoginModel lm) {
-        loginWithLoginModel(lm, browser);
-    }
-
 }

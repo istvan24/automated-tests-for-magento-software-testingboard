@@ -16,13 +16,11 @@ import java.time.Duration;
 public abstract class BasePage {
     protected WebDriver driver;
     protected String pageUrl;
-    //protected final Logger log;
 
     public BasePage() {
 
         this.driver = WebDriverSingleton.getDriver();
-        //this.pageUrl = pageUrl;
-        //this.log = log;
+
         PageFactory.initElements(driver, this);
     }
 
@@ -64,6 +62,4 @@ public abstract class BasePage {
     protected WebElement find(By locator) {
         return driver.findElement(locator);
     }
-
-    //public abstract void waitForPageToLoad();
 }

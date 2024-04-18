@@ -32,6 +32,7 @@ public class WebDriverSingleton {
         return driver.get();
     }
 
+    //annotation from Lombok allows you to throw checked exceptions without using the throws declaration
     @SneakyThrows
     private static WebDriver setupDriver() {
         Capabilities capabilities = BrowserCapabilities.getBrowserCapabilities(BROWSER);

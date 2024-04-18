@@ -1,4 +1,4 @@
-package utils;
+/*package utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,8 +27,7 @@ public class DatabaseUtils {
     public Statement getStatement(Connection connection) throws SQLException {
         return connection.createStatement();
     }
-
-
-
-
 }
+
+
+*/

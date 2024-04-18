@@ -8,10 +8,19 @@ import java.util.Random;
 
 import static helpers.Constants.RANDOM;
 
-public class StorePage extends BasePage{
+public class StorePage extends BasePage {
 
     @FindBy(className = "product-item-link")
     private List<WebElement> products;
+
+
+    //warning message for size
+    @FindBy(xpath = "//div[@class='swatch-attribute size']//div[contains(@id,'super_attribute')]")
+    private WebElement warningMessageForSize;
+
+    //warning message for color
+    @FindBy(xpath = "//div[@class='swatch-attribute color']//div[contains(@id,'super_attribute')]")
+    private WebElement warningMessageForColor;
 
     public StorePage() {
         super();
@@ -57,4 +66,13 @@ public class StorePage extends BasePage{
         ProductPage productPage = selectRandomProduct();
         productPage.addProductToCartWithoutQty();
     }
+
+    public boolean warningMessageForSizeMsgDisplayed() {
+        return warningMessageForSize.isDisplayed();
+    }
+
+    public boolean warningMessageForColorMsgDisplayed() {
+        return warningMessageForColor.isDisplayed();
+    }
+
 }

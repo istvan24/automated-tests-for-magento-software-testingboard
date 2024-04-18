@@ -1,12 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.13 s <<< FAILURE! - in TestSuite
-loginWithInvalidUsernameTest(tests.LoginTest)  Time elapsed: 0.018 s  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "tests.LoginTest.driver" is null
-	at tests.LoginTest.loginWithInvalidUsernameTest(LoginTest.java:48)
-
-loginWithValidCredentialsTests(tests.LoginTest)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "tests.LoginTest.driver" is null
-	at tests.LoginTest.loginWithValidCredentialsTests(LoginTest.java:32)
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 12, Time elapsed: 39.672 s <<< FAILURE! - in TestSuite
+accessAccount(tests.NewAddressTest)  Time elapsed: 38.592 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to find element with locator By.cssSelector: .fc-footer-buttons [aria-label="Consent"]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+	at tests.NewAddressTest.accessAccount(NewAddressTest.java:18)
 

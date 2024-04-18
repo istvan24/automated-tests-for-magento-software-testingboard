@@ -1,0 +1,38 @@
+[
+  {
+    "account": {
+      "username": "",
+      "password": ""
+    },
+    "usernameErr": "This is a required field.",
+    "passwordErr": "This is a required field.",
+    "generalErr": ""
+  },
+  {
+    "account": {
+      "username": "test",
+      "password": ""
+    },
+    "usernameErr": "",
+    "passwordErr": "This is a required field.",
+    "generalErr": ""
+  },
+  {
+    "account": {
+      "username": "",
+      "password": "password"
+    },
+    "usernameErr": "Please enter your username",
+    "passwordErr": "",
+    "generalErr": ""
+  },
+  {
+    "account": {
+      "username": "test",
+      "password": "password"
+    },
+    "usernameErr": "",
+    "passwordErr": "",
+    "generalErr": "Invalid username or password!"
+  }
+]

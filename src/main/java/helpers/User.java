@@ -20,7 +20,7 @@ public class User {
         lastName = faker.name().lastName();
         email = faker.internet().emailAddress();
         //string password
-        password = faker.internet().password(8,10,true,false);
+        password = faker.internet().password(8, 10, true, true);
         return this;
     }
 }

@@ -3,8 +3,9 @@ package pageObjects;
 import helpers.Address;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
-public class AddressPage {
+public class AddressPage extends BasePage {
 
     @FindBy(id = "telephone")
     private WebElement phoneNumberField;
@@ -25,10 +26,10 @@ public class AddressPage {
     private WebElement countryList;
 
     @FindBy(className = "save")
-    private WebElement saveAddressButton;
+    private WebElement saveAddressBtn;
 
     @FindBy(className = "add")
-    private WebElement addNewAddressButton;
+    private WebElement addNewAddressBtn;
 
     @FindBy(className = "message-success")
     private WebElement addressSavedMsg;
@@ -37,19 +38,14 @@ public class AddressPage {
         super();
     }
 
-    public boolean isAddNewAddressButtonDisplayed() {
-        return addNewAddressButton.isDisplayed();
+    public void addNewAddress(Address address) {
+        if (isAddNewAddressBtnDisplayed()) {
+            addNewAddressBtn.click();
+        }
+        fillAddressFields(address);
+        saveAddressBtn.click();
     }
 
-    public void addNewAddress(Address address) {
-        if (isAddNewAddressButtonDisplayed()) {
-            addNewAddressButton.click();
-        }
-        //fillAddressFields(address);
-        saveAddressButton.click();
-    }
-/*
-    //?????
     public void fillAddressFields(Address address) {
         phoneNumberField.sendKeys(address.getPhoneNumber());
         streetAddressField.sendKeys(address.getStreetAddress());
@@ -60,9 +56,12 @@ public class AddressPage {
         stateSelect.selectByVisibleText(address.getState());
         zipCodeField.sendKeys(address.getZipCode());
     }
-*/
+
+    public boolean isAddNewAddressBtnDisplayed() {
+        return addNewAddressBtn.isDisplayed();
+    }
+
     public boolean isAddressSavedMsgDisplayed() {
         return addressSavedMsg.isDisplayed();
     }
-
 }

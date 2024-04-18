@@ -1,14 +1,9 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import static com.pitechplus.qautils.screenplay.ActionsAbstract.wait;
-
-public class SignInPage extends BasePage{
+public class LoginPage extends BasePage{
 
     @FindBy(id = "email")
     WebElement emailField;
@@ -22,7 +17,7 @@ public class SignInPage extends BasePage{
     @FindBy(xpath = "//div[@role='alert']")
     WebElement generalErrorElement;
 
-    public SignInPage() {
+    public LoginPage() {
         super();
     }
 

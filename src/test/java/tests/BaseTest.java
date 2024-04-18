@@ -3,9 +3,7 @@ package tests;
 import helpers.*;
 import driver.WebDriverSingleton;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -15,6 +13,8 @@ import pageObjects.LandingPage;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+
+import static driver.WebDriverSingleton.closeBrowserAtEnd;
 
 public class BaseTest {
 
@@ -32,11 +32,6 @@ public class BaseTest {
         landingPage.openLandingPage();
     }
 
-    @AfterTest
-    public void cleanUpAfterTest() {
-        WebDriverSingleton.closeBrowserAtEnd();
-    }
-
     //take Screenshoot for failed test and save them to the target folder
     protected void takeScreenshot() {
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -52,4 +47,10 @@ public class BaseTest {
         }
         screenshotIndex++;
     }
+
+    @AfterTest
+    public void cleanUpAfterTest() {
+        closeBrowserAtEnd();
+    }
+
 }

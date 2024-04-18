@@ -1,4 +1,5 @@
-package dataProviders;
+/*
+package utils;
 
 import ObjectModels.LoginModel;
 import org.testng.annotations.DataProvider;
@@ -34,3 +35,4 @@ public class DBDataProviders
         return dp.iterator();
     }
 }
+*/

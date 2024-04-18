@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AccountPage extends BasePage{
+public class AccountPage extends BasePage {
 
     @FindBy(className = "success")
     private WebElement registrationMsg;
@@ -14,13 +14,13 @@ public class AccountPage extends BasePage{
     @FindBy(css = ".nav li:nth-of-type(4) a")
     private WebElement wishListButton;
 
-    public AccountPage() {
-        super();
-    }
+    @FindBy(xpath = "//button[@title='Add All to Cart']")
+    private WebElement AddAllToCartButton;
 
-    /*@Override
-    public void waitForPageToLoad() {
-    }*/
+    public AccountPage clickAddAllToCartButton() {
+        AddAllToCartButton.click();
+        return new AccountPage();
+    }
 
     public AddressPage clickAddressBookButton() {
         addressBookButton.click();

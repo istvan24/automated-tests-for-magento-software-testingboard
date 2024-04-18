@@ -2,11 +2,11 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import static helpers.Constants.WEBPAGE;
 
 public class LandingPage extends BasePage {
-
-    @FindBy (css = ".fc-footer-buttons [aria-label=\"Consent\"]")
+    @FindBy(css = ".fc-footer-buttons [aria-label=\"Consent\"]")
     private WebElement acceptConsentButton;
 
     @FindBy(css = "li.authorization-link a")
@@ -23,7 +23,6 @@ public class LandingPage extends BasePage {
 
     @FindBy(id = "pass-error")
     private WebElement loginPassErrorMessage;
-
 
     //"Please enter a valid email address (Ex: johndoe@domain.com).""
     @FindBy(id = "pass-error")
@@ -50,13 +49,14 @@ public class LandingPage extends BasePage {
         driver.get(WEBPAGE);
     }
 
-    public SignInPage clickSignIn() {
+    public LoginPage clickSignIn() {
         acceptConsentButton.click();
         signInButton.click();
-        return new SignInPage();
+        return new LoginPage();
     }
 
     public RegisterPage clickCreateNewAccountButton() {
+        //acceptConsentButton.click();
         createNewAccountButton.click();
         return new RegisterPage();
     }
@@ -82,6 +82,5 @@ public class LandingPage extends BasePage {
     public void clickAccountMenuButton() {
         accountSwitchMenuButton.click();
     }
-
 
 }
