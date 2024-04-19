@@ -15,7 +15,7 @@ public class ProductPageTest extends BaseTest {
     }
 
     @Test
-    //Check if both validation messages appears for on Product page if no size and no color is selected.
+    //Check if both warning messages appears for on Product page if no size and no color is selected.
     public void verifyRequiredFieldMessageOnProductPageTest() {
         try {
             StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);

@@ -82,3 +82,10 @@ information, default browser, etc
 3. Select the XL size.
 4. Check if the XL size appears for all the filtered products.
    Expected result: XL size appears for all the products.
+
+### Tets case nr 9: Test the size and color warning messages for a product on a product page: verifyRequiredFieldMessageOnProductPageTest
+1. Login with valid credentials.
+2. Go to a product page.
+3. Click add to cart button.
+4. Check the 2 validation messages: size and color for the product.
+   Expected result: The mandatory warning messages appears.
