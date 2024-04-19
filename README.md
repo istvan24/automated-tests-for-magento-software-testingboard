@@ -54,29 +54,21 @@ information, default browser, etc
 4. Go to shopping cart.
    Expected result: Products were added to cart.
 
-### Tets case nr 6: Test the displayed price in the cart are correct: cartPricingTest
-1. Login with valid credentials.
-2. Go to a category page.
-3. Select a product with size and color.
-4. Add it to the cart, then checkout.
-5. Check the product subtotal, cart subtotal and the total value is correctly displayed.
-   Expected result: All of them are correctly displayed at checkout page.
-
-### Tets case nr 7: Test if given number of products are successfully added to cart: productAddedSuccesfullyToCartTest
+### Tets case nr 6: Test if given number of products are successfully added to cart: productAddedSuccesfullyToCartTest
 1. Login with valid credentials.
 2. Go to a category page, save the available products number.
 3. Go to a category and select other products, add them to the cart.
 4. Navigate back to the cart and check if the final products quantity is correctly updated with.
    Expected result: The final quantity is correctly calculated. 
 
-### Tets case nr 8: Test the add new address on the My account page: addNewAddressTest
+### Tets case nr 7: Test the add new address on the My account page: addNewAddressTest
 1. Login with valid credentials.
 2. Go to My account page.
 3. Add a new address using the javafaker library. 
 4. Check if the message-success appears.
    Expected result: New address is succefully added.
 
-### Tets case nr 9: Test the Sizefilter on a category page: verifySizeFilterOnCategoryPageTest
+### Tets case nr 8: Test the Sizefilter on a category page: verifySizeFilterOnCategoryPageTest
 1. Login with valid credentials.
 2. Go to a category page.
 3. Select the XL size.

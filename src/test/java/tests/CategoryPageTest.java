@@ -5,21 +5,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
 
+import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
 public class CategoryPageTest extends BaseTest {
 
-    @BeforeTest
+    /*@BeforeTest
     public static void accesAccount() {
         landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
     }
-
+*/
     @Test
     //"Check if size filter is working on a product page."
     public void verifySizeFilterOnCategoryPageTest() {
@@ -29,7 +31,7 @@ public class CategoryPageTest extends BaseTest {
 
             String sizeToFilter = "XL";
 
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
             WebElement sizeFilterElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='filter-options-title'][text()='Size']")));
             sizeFilterElement.click();
@@ -64,7 +66,10 @@ public class CategoryPageTest extends BaseTest {
             throw e;
         }
     }
-
+    @AfterMethod
+    public void cleanUpAfterTest() {
+        closeBrowserAtEnd();
+    }
 }
 
 

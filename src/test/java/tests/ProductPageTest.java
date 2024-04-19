@@ -1,18 +1,15 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.StorePage;
 
+import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
 public class ProductPageTest extends BaseTest {
-
-    @BeforeTest
-    public static void accesAccount() {
-        landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
-    }
 
     @Test
     //Check if both warning messages appears for on Product page if no size and no color is selected.

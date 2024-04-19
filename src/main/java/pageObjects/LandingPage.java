@@ -12,6 +12,9 @@ public class LandingPage extends BasePage {
     @FindBy(css = "li.authorization-link a")
     private WebElement signInButton;
 
+    @FindBy(xpath = "//div[@aria-hidden='false']//a[normalize-space()='Sign Out']")
+    private WebElement logoutButton;
+
     @FindBy(css = ".authorization-link + li a")
     private WebElement createNewAccountButton;
 
@@ -50,12 +53,22 @@ public class LandingPage extends BasePage {
     }
 
     public LoginPage clickSignIn() {
-        acceptConsentButton.click();
+        //acceptConsentButton.click();
         signInButton.click();
         return new LoginPage();
     }
 
-    public RegisterPage clickCreateNewAccountButton() {
+    public void acceptButton(){
+        acceptConsentButton.click();
+    }
+
+    public LoginPage clickLogout() {
+        clickAccountMenuButton();
+        logoutButton.click();
+        return new LoginPage();
+    }
+
+     public RegisterPage clickCreateNewAccountButton() {
         //acceptConsentButton.click();
         createNewAccountButton.click();
         return new RegisterPage();

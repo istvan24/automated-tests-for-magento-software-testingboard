@@ -1,21 +1,13 @@
 package tests;
 
-import driver.WebDriverSingleton;
-import org.testng.annotations.AfterTest;
 import pageObjects.LoginPage;
-import pageObjects.WelcomePage;
-import org.testng.annotations.AfterMethod;
 
 public class LoginBasedTest extends BaseTest {
-
     LoginPage signInPage;
-    WelcomePage welcomePage;
 
     protected void loginUser(String username, String password) {
         setupDriver();
-        //driver.get(url + "/signin");
         signInPage = new LoginPage();
-        welcomePage = new WelcomePage();
         signInPage.login(username, password);
     }
 /*
@@ -40,5 +32,4 @@ public class LoginBasedTest extends BaseTest {
         loginUserCheckErr(loginModel.getAccount().getUsername(), loginModel.getAccount().getPassword(),
                 loginModel.getUsernameErr(), loginModel.getPasswordErr(), loginModel.getGeneralErr());
     }*/
-
 }

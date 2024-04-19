@@ -60,8 +60,8 @@ public class WebDriverSingleton {
 
     public static void closeBrowserAtEnd() {
         if (driver.get() != null) {
-            System.out.println("Browser was closed");
             driver.get().quit();
+            driver.remove();
         }
     }
 }
