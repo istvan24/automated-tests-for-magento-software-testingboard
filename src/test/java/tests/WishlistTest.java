@@ -23,7 +23,7 @@ public class WishlistTest extends BaseTest {
             StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);
             WishListPage wishlistPage = storePage.goToProductPage(RANDOM).wishListProduct();
 
-            Assert.assertFalse(wishlistPage.isProductWishListMsgDisplayed(),
+            Assert.assertTrue(wishlistPage.isProductWishListMsgDisplayed(),
                     "The succes message for adding the product to wishlist is not displayed.");
         } catch (Throwable e) {
             takeScreenshot();

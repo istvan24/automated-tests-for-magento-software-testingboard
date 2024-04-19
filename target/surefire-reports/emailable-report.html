@@ -8,93 +8,243 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Smoke tests for Magento website</th></tr>
+<tr><td><a href="#t0">SmokeTests</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">9</td><td></td><td></td></tr>
 <tr><th colspan="8">Regression tests for Magento website</th></tr>
-<tr><td><a href="#t0">RegressionTests</a></td><td class="num">1</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">54,515</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">RegressionTests</a></td><td class="num">0</td><td class="num attn">7</td><td class="num">0</td><td class="num">0</td><td class="num">98</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">10</th><th class="num">0</th><th class="num">0</th><th class="num">107</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression tests for Magento website</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RegressionTests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.CalculateCartPricesTest</td><td><a href="#m0">accessAccount</a></td><td rowspan="1">1713437328663</td><td rowspan="1">30078</td></tr><tr><th colspan="4">RegressionTests &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.CalculateCartPricesTest</td><td><a href="#m1">cleanUpAfterTest</a></td><td rowspan="1">1713437372951</td><td rowspan="1">0</td></tr><tr><th colspan="4">RegressionTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">tests.CalculateCartPricesTest</td><td><a href="#m2">cartPricingTest</a></td><td rowspan="1">1713437358776</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">productAddedSuccesfullyToCartTest</a></td><td rowspan="1">1713437358779</td><td rowspan="1">0</td></tr><tr><th colspan="4">RegressionTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.NewAddressTest</td><td><a href="#m4">addNewAddressTest</a></td><td rowspan="1">1713437358784</td><td rowspan="1">14163</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke tests for Magento website</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">setupDriver</a></td><td rowspan="1">1713538489030</td><td rowspan="1">6718</td></tr><tr><th colspan="4">SmokeTests &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">tests.LoginTest</td><td><a href="#m1">closeBrowser</a></td><td rowspan="1">1713538495758</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">logout</a></td><td rowspan="1">1713538495752</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.RegisterTest</td><td><a href="#m3">logout</a></td><td rowspan="1">1713538495755</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">tests.WishlistTest</td><td><a href="#m4">accessAccount</a></td><td rowspan="1">1713538495756</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">logout</a></td><td rowspan="1">1713538495758</td><td rowspan="1">0</td></tr><tr><th colspan="4">SmokeTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m6">loginWithValidCredentialsTests</a></td><td rowspan="1">1713538495751</td><td rowspan="1">1</td></tr><tr class="skippedodd"><td rowspan="1">tests.RegisterTest</td><td><a href="#m7">registerUserTest</a></td><td rowspan="1">1713538495754</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="1">tests.WishlistTest</td><td><a href="#m8">addRandomProductToWishlistTest</a></td><td rowspan="1">1713538495757</td><td rowspan="1">0</td></tr></tbody>
+<tbody><tr><th colspan="4">Regression tests for Magento website</th></tr></tbody><tbody id="t1"><tr><th colspan="4">RegressionTests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m9">setupDriver</a></td><td rowspan="1">1713538479859</td><td rowspan="1">8885</td></tr><tr><th colspan="4">RegressionTests &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.CartTest</td><td><a href="#m10">accessAccount</a></td><td rowspan="1">1713538488858</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="2">tests.LoginTest</td><td><a href="#m11">closeBrowser</a></td><td rowspan="1">1713538488862</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m12">logout</a></td><td rowspan="1">1713538488838</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">tests.MyAccountTest</td><td><a href="#m13">accessAccount</a></td><td rowspan="1">1713538488846</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m14">logout</a></td><td rowspan="1">1713538488848</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.RegisterTest</td><td><a href="#m15">logout</a></td><td rowspan="1">1713538488850</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">tests.WishlistTest</td><td><a href="#m16">accessAccount</a></td><td rowspan="1">1713538488852</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m17">logout</a></td><td rowspan="1">1713538488855</td><td rowspan="1">0</td></tr><tr><th colspan="4">RegressionTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">tests.CartTest</td><td><a href="#m18">addProductFromWishListToCartTest</a></td><td rowspan="1">1713538488859</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m19">productAddedSuccesfullyToCartTest</a></td><td rowspan="1">1713538488861</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m20">loginWithValidCredentialsTests</a></td><td rowspan="1">1713538488835</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="1">tests.MyAccountTest</td><td><a href="#m21">addNewAddressTest</a></td><td rowspan="1">1713538488847</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.ProductPageTest</td><td><a href="#m22">verifyRequiredFieldMessageOnProductPageTest</a></td><td rowspan="1">1713538488856</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m23">registerUserTest</a></td><td rowspan="1">1713538488850</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.WishlistTest</td><td><a href="#m24">addRandomProductToWishlistTest</a></td><td rowspan="1">1713538488853</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>RegressionTests</h2><h3 id="m0">tests.CalculateCartPricesTest#accessAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.fc-footer-buttons [aria-label=&quot;Consent&quot;]&quot;}
-  (Session info: chrome=123.0.6312.123)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+<h2>SmokeTests</h2><h3 id="m0">tests.LoginTest#setupDriver</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59273/devtools/browser/2c6a38d8-3031-4424-8c21-b7a2f2aa7714
 Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d234bfec4efa9dbf4fc990bd4e1937ac, findElement {using=css selector, value=.fc-footer-buttons [aria-label=&quot;Consent&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54572}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54572/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d234bfec4efa9dbf4fc990bd4e1937ac
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pageObjects.LandingPage.clickSignIn(LandingPage.java:53)
-	at tests.CalculateCartPricesTest.accessAccount(CalculateCartPricesTest.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.CalculateCartPricesTest#cleanUpAfterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.CalculateCartPricesTest#cartPricingTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.fc-footer-buttons [aria-label=&quot;Consent&quot;]&quot;}
-  (Session info: chrome=123.0.6312.123)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.LoginTest#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.LoginTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.RegisterTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.WishlistTest#accessAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.WishlistTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.LoginTest#loginWithValidCredentialsTests</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59273/devtools/browser/2c6a38d8-3031-4424-8c21-b7a2f2aa7714
 Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d234bfec4efa9dbf4fc990bd4e1937ac, findElement {using=css selector, value=.fc-footer-buttons [aria-label=&quot;Consent&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54572}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54572/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d234bfec4efa9dbf4fc990bd4e1937ac
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pageObjects.LandingPage.clickSignIn(LandingPage.java:53)
-	at tests.CalculateCartPricesTest.accessAccount(CalculateCartPricesTest.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.CalculateCartPricesTest#productAddedSuccesfullyToCartTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.fc-footer-buttons [aria-label=&quot;Consent&quot;]&quot;}
-  (Session info: chrome=123.0.6312.123)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.RegisterTest#registerUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59273/devtools/browser/2c6a38d8-3031-4424-8c21-b7a2f2aa7714
 Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d234bfec4efa9dbf4fc990bd4e1937ac, findElement {using=css selector, value=.fc-footer-buttons [aria-label=&quot;Consent&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54572}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54572/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d234bfec4efa9dbf4fc990bd4e1937ac
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pageObjects.LandingPage.clickSignIn(LandingPage.java:53)
-	at tests.CalculateCartPricesTest.accessAccount(CalculateCartPricesTest.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.NewAddressTest#addNewAddressTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.WishlistTest#addRandomProductToWishlistTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59273/devtools/browser/2c6a38d8-3031-4424-8c21-b7a2f2aa7714
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>RegressionTests</h2><h3 id="m9">tests.LoginTest#setupDriver</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.CartTest#accessAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.LoginTest#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.LoginTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.MyAccountTest#accessAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.MyAccountTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.RegisterTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">tests.WishlistTest#accessAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">tests.WishlistTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">tests.CartTest#addProductFromWishListToCartTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">tests.CartTest#productAddedSuccesfullyToCartTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">tests.LoginTest#loginWithValidCredentialsTests</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">tests.MyAccountTest#addNewAddressTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">tests.ProductPageTest#verifyRequiredFieldMessageOnProductPageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">tests.RegisterTest#registerUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">tests.WishlistTest#addRandomProductToWishlistTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:59240/devtools/browser/3c834026-42c0-48a0-bc6e-351b10658e67
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:54)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:46)
+	at driver.WebDriverSingleton.getLocalInstance(WebDriverSingleton.java:56)
+	at driver.WebDriverSingleton.setupDriver(WebDriverSingleton.java:40)
+	at driver.WebDriverSingleton.getDriver(WebDriverSingleton.java:30)
+	at tests.BaseTest.setupDriver(BaseTest.java:24)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

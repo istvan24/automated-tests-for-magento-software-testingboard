@@ -3,7 +3,6 @@ pageObjects\StorePage.class
 driver\BrowserCapabilities.class
 pageObjects\RegisterPage.class
 helpers\User.class
-pageObjects\WelcomePage.class
 pageObjects\ProductPage.class
 helpers\Constants.class
 ObjectModels\LoginModel.class

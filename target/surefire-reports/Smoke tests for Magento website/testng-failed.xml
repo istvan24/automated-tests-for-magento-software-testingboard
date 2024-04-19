@@ -3,20 +3,31 @@
 <suite name="Failed suite [Smoke tests for Magento website]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="SmokeTests(failed)" verbose="0">
     <classes>
-      <class name="tests.RegisterTest">
-        <methods>
-          <include name="cleanUpAfterTest"/>
-          <include name="registerUserTest"/>
-          <include name="setupDriver"/>
-        </methods>
-      </class> <!-- tests.RegisterTest -->
       <class name="tests.LoginTest">
         <methods>
-          <include name="cleanUpAfterTest"/>
+          <include name="logout"/>
+          <include name="closeBrowser"/>
           <include name="loginWithValidCredentialsTests"/>
           <include name="setupDriver"/>
         </methods>
       </class> <!-- tests.LoginTest -->
+      <class name="tests.WishlistTest">
+        <methods>
+          <include name="accessAccount"/>
+          <include name="closeBrowser"/>
+          <include name="addRandomProductToWishlistTest"/>
+          <include name="setupDriver"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- tests.WishlistTest -->
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="logout"/>
+          <include name="registerUserTest"/>
+          <include name="closeBrowser"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
     </classes>
   </test> <!-- SmokeTests(failed) -->
 </suite> <!-- Failed suite [Smoke tests for Magento website] -->

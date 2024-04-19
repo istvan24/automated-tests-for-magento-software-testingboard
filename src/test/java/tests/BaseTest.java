@@ -14,12 +14,10 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class BaseTest {
-
     protected static WebDriver driver;
     protected static LandingPage landingPage;
     protected final SoftAssert softAssert = new SoftAssert();
     private int screenshotIndex = 0;
-
 
     @BeforeSuite
     public static void setupDriver() {
@@ -29,8 +27,8 @@ public class BaseTest {
         landingPage = new LandingPage();
         landingPage.openLandingPage();
         landingPage.acceptButton();
-
     }
+
     @AfterTest
     public static void closeBrowser() {
         WebDriverSingleton.closeBrowserAtEnd();
