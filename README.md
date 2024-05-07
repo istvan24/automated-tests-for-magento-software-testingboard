@@ -1,4 +1,4 @@
-Test automation for Magento eCommerce.
+### Test automation for Magento eCommerce.
 
 ## Technology Stack:
 1. Programming language - `Java`
