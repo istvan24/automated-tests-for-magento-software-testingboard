@@ -1,7 +1,6 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.CartPage;
@@ -44,6 +43,7 @@ public class CartTest extends BaseTest {
             storePage.addProductsToCart(addedQuantity);
             cartPage = storePage.getNavigationBar().goToCart();
             softAssert.assertTrue(cartPage.isProductQuantityValid(initialQuantity, addedQuantity));
+
         } catch (Throwable e) {
             takeScreenshot();
             throw e;

@@ -1,19 +1,16 @@
 package tests;
 
 import helpers.User;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pageObjects.AccountPage;
-import pageObjects.LandingPage;
 import pageObjects.RegisterPage;
 
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
-
-public class RegisterTest extends BaseTest {
+public class CreateNewAccountTest extends BaseTest {
 
     @Test
     //Check if new user can register.
-    public void registerUserTest() {
+    public void createNewUserTest() {
         try {
             RegisterPage registerPage = landingPage.clickCreateNewAccountButton();
             AccountPage accountPage = registerPage.registerAccount(new User().createFakeUser());
@@ -23,7 +20,8 @@ public class RegisterTest extends BaseTest {
             throw e;
         }
     }
-    @AfterMethod
+
+    @AfterTest
     public void logout() {
         landingPage.clickLogout();
     }

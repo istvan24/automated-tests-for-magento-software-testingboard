@@ -1,6 +1,5 @@
 package tests;
 
-import helpers.*;
 import driver.WebDriverSingleton;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -8,6 +7,7 @@ import org.testng.Reporter;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pageObjects.LandingPage;
+import utils.ConstantUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,6 @@ public class BaseTest {
 
         landingPage = new LandingPage();
         landingPage.openLandingPage();
-        landingPage.acceptButton();
     }
 
     @AfterTest
@@ -37,7 +36,7 @@ public class BaseTest {
     //take Screenshoot for failed test and save them to the target folder
     protected void takeScreenshot() {
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        final String fileName = Constants.SCREENSHOT_FILE + screenshotIndex + ".png";
+        final String fileName = ConstantUtils.SCREENSHOT_FILE + screenshotIndex + ".png";
 
         File finalFile = new File(fileName);
 

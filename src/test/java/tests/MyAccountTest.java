@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.AccountPage;
 import pageObjects.AddressPage;
 
-import static driver.WebDriverSingleton.closeBrowserAtEnd;
 import static helpers.Constants.*;
 
 public class MyAccountTest extends BaseTest {

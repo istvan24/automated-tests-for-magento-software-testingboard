@@ -4,7 +4,7 @@
     <test name="SmokeTests">
         <classes>
             <class name="tests.LoginTest"/>
-            <class name="tests.RegisterTest"/>
+            <class name="tests.CreateNewAccountTest"/>
             <class name="tests.WishlistTest"/>
         </classes>
 </test>

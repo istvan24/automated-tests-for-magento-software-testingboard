@@ -1,16 +1,18 @@
 package tests;
 
-import pageObjects.LoginPage;
+import objectModels.LoginModel;
+import org.testng.Assert;
+import pageObjects.SignInPage;
 
 public class LoginBasedTest extends BaseTest {
-    LoginPage signInPage;
+    SignInPage signInPage;
 
     protected void loginUser(String username, String password) {
         setupDriver();
-        signInPage = new LoginPage();
+        signInPage = new SignInPage();
         signInPage.login(username, password);
     }
-/*
+
     protected void loginUserCheckErr(String username, String password, String usernameError, String passwordError,
                                      String generalError) {
 
@@ -31,5 +33,5 @@ public class LoginBasedTest extends BaseTest {
         System.out.println(loginModel);
         loginUserCheckErr(loginModel.getAccount().getUsername(), loginModel.getAccount().getPassword(),
                 loginModel.getUsernameErr(), loginModel.getPasswordErr(), loginModel.getGeneralErr());
-    }*/
+    }
 }

@@ -1,5 +1,5 @@
 //TODO
-/*package utils;
+package utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DatabaseUtils {
-
     String dbHostname, dbUser, dbPassword, dbSchema, dbPort;
     String configFile = ConstantUtils.CONFIG_FILE;
 
@@ -29,4 +28,3 @@ public class DatabaseUtils {
         return connection.createStatement();
     }
 }
-*/

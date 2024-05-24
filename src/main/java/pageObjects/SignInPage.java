@@ -1,9 +1,11 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class LoginPage extends BasePage{
+public class SignInPage extends BasePage{
 
     @FindBy(id = "email")
     WebElement emailField;
@@ -17,7 +19,7 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//div[@role='alert']")
     WebElement generalErrorElement;
 
-    public LoginPage() {
+    public SignInPage() {
         super();
     }
 
@@ -41,7 +43,7 @@ public class LoginPage extends BasePage{
     public void clickSignInButton() {
         signInButton.click();
     }
-/*
+
     public String getUsernameErr() {
         return getErrorMsg("user");
     }
@@ -54,9 +56,10 @@ public class LoginPage extends BasePage{
         return generalErrorElement.getText();
     }
 
+    //TODO - find a commun slector if possible
     private String getErrorMsg(String type) {
         return wait.until(
                 ExpectedConditions.presenceOfElementLocated(
                         By.xpath("//div[@id='" + type + "-error']"))).getText();
-    }*/
+    }
 }

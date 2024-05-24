@@ -1,0 +1,9 @@
+<loginModel>
+    <account>
+        <username/>
+        <password>test</password>
+    </account>
+    <usernameErr>Please enter your username</usernameErr>
+    <passwordErr/>
+    <generalErr/>
+</loginModel>

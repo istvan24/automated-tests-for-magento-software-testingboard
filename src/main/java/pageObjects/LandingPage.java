@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import static helpers.Constants.WEBPAGE;
 
 public class LandingPage extends BasePage {
-    @FindBy(css = ".fc-footer-buttons [aria-label=\"Consent\"]")
-    private WebElement acceptConsentButton;
 
     @FindBy(css = "li.authorization-link a")
     private WebElement signInButton;
@@ -52,24 +50,19 @@ public class LandingPage extends BasePage {
         driver.get(WEBPAGE);
     }
 
-    public LoginPage clickSignIn() {
-        //acceptConsentButton.click();
+    public SignInPage clickSignIn() {
+
         signInButton.click();
-        return new LoginPage();
+        return new SignInPage();
     }
 
-    public void acceptButton(){
-        acceptConsentButton.click();
-    }
-
-    public LoginPage clickLogout() {
+    public SignInPage clickLogout() {
         clickAccountMenuButton();
         logoutButton.click();
-        return new LoginPage();
+        return new SignInPage();
     }
 
      public RegisterPage clickCreateNewAccountButton() {
-        //acceptConsentButton.click();
         createNewAccountButton.click();
         return new RegisterPage();
     }

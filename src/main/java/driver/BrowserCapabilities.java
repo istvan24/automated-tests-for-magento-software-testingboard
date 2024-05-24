@@ -25,7 +25,7 @@ public class BrowserCapabilities {
     //start the Chrome browsers maximized and in incognito
     private static ChromeOptions getChromeCapabilities() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("disable-popup-blocking");
+        //options.addArguments("disable-popup-blocking");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("start-maximized");
         return options;

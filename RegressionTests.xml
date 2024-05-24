@@ -4,10 +4,12 @@
     <test name="RegressionTests">
         <classes>
             <class name="tests.LoginTest"/>
+            <class name="tests.LoginNegativeTest"/>
             <class name="tests.MyAccountTest"/>
-             <class name="tests.RegisterTest"/>
-             <class name="tests.WishlistTest"/>
-             <class name="tests.ProductPageTest"/>
+            <class name="tests.CreateNewAccountTest"/>
+            <class name="tests.CreateNewAccountNegativeTests"/>
+            <class name="tests.WishlistTest"/>
+            <class name="tests.ProductPageTest"/>
             <class name="tests.CartTest"/>
         </classes>
     </test>

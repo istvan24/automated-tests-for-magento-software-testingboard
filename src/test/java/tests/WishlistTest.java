@@ -30,6 +30,7 @@ public class WishlistTest extends BaseTest {
             throw e;
         }
     }
+
     @AfterMethod
     public void logout() {
         landingPage.clickLogout();
