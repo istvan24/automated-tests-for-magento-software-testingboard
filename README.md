@@ -1,3 +1,5 @@
+### Test automation for Magento eCommerce.
+
 ## Technology Stack:
 1. Programming language - `Java`
 2. Build and project management tool - `Maven`
