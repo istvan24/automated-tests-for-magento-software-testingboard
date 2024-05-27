@@ -16,8 +16,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import static helpers.Constants.EMPTYDEMAIL;
-import static helpers.Constants.EMPTYPASSWORD;
+import static helpers.Constants.EMPTY_EMAIL;
+import static helpers.Constants.EMPTY_PASSWORD;
 
 public class LoginNegativeTest {
     protected static WebDriver driver;
@@ -36,7 +36,7 @@ public class LoginNegativeTest {
             landingPage.openLandingPage();
 
             SignInPage signInPage = landingPage.clickSignIn();
-            landingPage = signInPage.login(EMPTYDEMAIL, EMPTYPASSWORD);
+            landingPage = signInPage.login(EMPTY_EMAIL, EMPTY_PASSWORD);
 
             softAssert.assertTrue(landingPage.loginEmailFieldisEmptyMsgDisplayed());
             softAssert.assertTrue(landingPage.loginPassFieldisEmptyMsgDisplayed());

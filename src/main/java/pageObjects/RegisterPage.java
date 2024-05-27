@@ -4,6 +4,8 @@ import helpers.User;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static helpers.Constants.*;
+
 public class RegisterPage extends BasePage {
 
     @FindBy(id = "firstname")
@@ -34,7 +36,7 @@ public class RegisterPage extends BasePage {
     private WebElement confirmPasswordFieldErrMsg;
 
 
-    @FindBy(xpath = "//div[@id='password-strength-meter']")
+    @FindBy(xpath = "//span[@id='password-strength-meter-label']")
     private WebElement passwordStrengthStrongMsg;
 
     @FindBy(id = "password-confirmation")
@@ -50,14 +52,13 @@ public class RegisterPage extends BasePage {
         super();
     }
 
-
     public AccountPage registerAccount(User user) {
         fillRegistrationFields(user);
         createAnAccountButton.click();
         return new AccountPage();
     }
 
-    public AccountPage cickOnCreateAnAccountButton() {
+    public AccountPage clickOnCreateAnAccountButton() {
         createAnAccountButton.click();
         return new AccountPage();
     }
@@ -68,6 +69,20 @@ public class RegisterPage extends BasePage {
         emailAdressField.sendKeys(user.getEmail());
         passwordField.sendKeys(user.getPassword());
         confirmPasswordField.sendKeys(user.getPassword());
+    }
+
+    public void fillInvalidEmailAddressFormat() {
+        emailAdressField.sendKeys(INVALID_EMAIL_ADDRESS);
+    }
+
+    public void fillInvalidPasswordOnRegistrationPage() {
+        passwordField.sendKeys(SHORT_PSW);
+        confirmPasswordField.sendKeys(SHORT_CONFIRM_PSW);
+    }
+
+    public void secondPasswordIsNotInSyncOnRegistrationPage() {
+        passwordField.sendKeys(SHORT_PSW);
+        confirmPasswordField.sendKeys(CONFIRM_PSW_NOT_SYNC);
     }
 
     public boolean firstNameRequiredFieldErrMsgDisplayed() {
@@ -86,11 +101,23 @@ public class RegisterPage extends BasePage {
         return passwordFieldErrMsg.isDisplayed();
     }
 
-    public boolean confirmationPasswordFieldErrMsgDisplayed() {
+    public String passwordFieldErrMsgGetText() {
+        return passwordFieldErrMsg.getText();
+    }
+
+    public String confirmPasswordFieldErrMsgGetText() {
+        return confirmPasswordFieldErrMsg.getText();
+    }
+
+    public boolean confirmationPswFieldErrMsgDisplayed() {
         return confirmPasswordFieldErrMsg.isDisplayed();
     }
 
     public boolean requiredFieldsErrMsgDisplayed() {
         return requiredFieldsErrMsg.isDisplayed();
+    }
+
+    public String noPasswordFieldPaswStrengthGetText() {
+        return passwordStrengthStrongMsg.getText();
     }
 }

@@ -13,7 +13,7 @@ public class LoginTest extends BaseTest {
     public void loginWithValidCredentialsTests() {
         try {
             SignInPage signInPage = landingPage.clickSignIn();
-            landingPage = signInPage.login(VALIDEMAIL, VALIDPASSWORD);
+            landingPage = signInPage.login(VALID_EMAIL, VALID_PASSWORD);
             Assert.assertTrue(landingPage.isLoggedInMsgDisplayed());
         } catch (Throwable e) {
             takeScreenshot();

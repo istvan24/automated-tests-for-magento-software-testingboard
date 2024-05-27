@@ -13,7 +13,7 @@ public class WishlistTest extends BaseTest {
 
     @BeforeMethod
     public static void accessAccount() {
-        landingPage = landingPage.clickSignIn().login(VALIDEMAIL, VALIDPASSWORD);
+        landingPage = landingPage.clickSignIn().login(VALID_EMAIL, VALID_PASSWORD);
     }
 
     @Test
