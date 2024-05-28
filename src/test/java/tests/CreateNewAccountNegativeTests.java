@@ -67,7 +67,7 @@ public class CreateNewAccountNegativeTests extends BaseTest {
     }
 
     @Test
-    //verify the minimum length of the password field error message
+    //verify the minimum requirement for password. If this is not fulfilled,specific warning message appears
     public void VerifyInvalidPasswordWarningMsgOnRegisterPage() {
 
         try {

@@ -17,7 +17,7 @@ public class WishlistTest extends BaseTest {
     }
 
     @Test
-    //Random product is succesfully added to the wishlist.
+    //Random product is successfully added to the wishlist.
     public void addRandomProductToWishlistTest() {
         try {
             StorePage storePage = landingPage.getNavigationBar().selectCategory(NEW_CATEGORY);

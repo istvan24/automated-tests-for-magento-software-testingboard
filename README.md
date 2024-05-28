@@ -35,55 +35,82 @@ information, default browser, etc
 3. Leave empty all the mandatory fields and click on the "Create an account" button. 
    Expected result: All the validation messages are shown.
 
-### Test case nr 3: Login into an existent account: LoginWithValidCredentialsTests
+### Test case nr 3: verify the warning message in case if an invalid email is introduced: VerifyEmailAddressFormat
+1. Go to login page `https://magento.softwaretestingboard.com/customer/account/create/`
+2. Click Create an account button.
+3. Verify the warning messages.
+   Expected result: All the validation messages are shown.
+
+### Test case nr 4: verify the minimum length of the password field error message: VerifyShortPasswordWarningMsgOnRegisterPage
+1. Go to login page `https://magento.softwaretestingboard.com/customer/account/create/`
+2. Enter a short password.
+3. Click Create an account button.
+4. Verify the warning message for short password.
+   Expected result: A specific warning message appears for short password.
+
+### Test case nr 5: verify the minimum requirement for password. If this is not fulfilled,specific warning message appears: VerifyInvalidPasswordWarningMsgOnRegisterPage
+1. Go to login page `https://magento.softwaretestingboard.com/customer/account/create/`
+2. Enter an invalid password, which does not contain the minimum required characters.
+3. Click Create an account button.
+4. Verify the warning message for short password.
+   Expected result: A specific warning message appears for the password, which needs to contain different characters.
+
+### Test case nr 6: verify the message for the case, when confirm password is not the same as the first password: VerifySecondPasswordWarningMsgOnRegisterPage
+1. Go to login page `https://magento.softwaretestingboard.com/customer/account/create/`
+2. Enter a password, then a different password for the confirmation password.
+3. Click Create an account button.
+4. Verify the warning message.
+   Expected result: A specific warning message appears for the case, when the used two passwords are not the same.
+
+### Test case nr 7: Login into an existent account: LoginWithValidCredentialsTests
 1. Go to login page 'https://magento.softwaretestingboard.com/customer/account/login/'
 2. Fill required fields with an existent users credentials.
 3. Click on Sign in button.
 4. Check the "Welcome + username!" text after the success login.
    Expected result: The welcome message appears after the valid login.
 
-### Test case nr 4: Check the warning messages from login page: LoginWithInvalidUsernameTest
+### Test case nr 8: Check the warning messages from login page: LoginWithInvalidUsernameTest
 1. Go to login page 'https://magento.softwaretestingboard.com/customer/account/login/'
 2. Leave empty the warning fields.
 3. Click on Sign in button.
 4. Check the warning messages below the mandatory fields.
    Expected result: The warning messages appears correct.
 
-### Test case nr 5: Test the add products to Wishlist functionality: AddRandomProductToWishlistTest
+### Test case nr 9: Test the add products to Wishlist functionality: AddRandomProductToWishlistTest
 1. Login with valid credentials.
 2. Go to a page with clothes.
 3. Go to any product detail page and click Add to Wishlist button.
    Expected result: Product was added to Wishlist.
 
-### Test case nr 6: Test the add products to cart functionality: AddProductFromWishListToCartTest
+### Test case nr 10: Test the add products to cart functionality: AddProductFromWishListToCartTest
 1. Login with valid credentials.
 2. Go to a page with clothes.
 3. Add 3 different products to cart.
 4. Go to shopping cart.
    Expected result: Products were added to cart.
 
-### Test case nr 7: Test if given number of products are successfully added to cart: ProductAddedSuccesfullyToCartTest
+### Test case nr 11: Test if given number of products are successfully added to cart: ProductAddedSuccesfullyToCartTest
 1. Login with valid credentials.
 2. Go to a category page, save the available products number.
 3. Go to a category and select other products, add them to the cart.
 4. Navigate back to the cart and check if the final products quantity is correctly updated with.
    Expected result: The final quantity is correctly calculated. 
 
-### Test case nr 8: Test the add new address on the My account page: AddNewAddressTest
+### Test case nr 12: Test the add new address functionalityon the My account page: AddNewAddressTest
 1. Login with valid credentials.
 2. Go to My account page.
 3. Add a new address using the javafaker library. 
 4. Check if the message-success appears.
    Expected result: New address is succefully added.
 
-### Test case nr 9: Test the Sizefilter on a category page: VerifySizeFilterOnCategoryPageTest
+### Test case nr 13: Test the Sizefilter on a category page: VerifySizeFilterOnCategoryPageTest
 1. Login with valid credentials.
 2. Go to a category page.
 3. Select the XL size.
 4. Check if the XL size appears for all the filtered products.
    Expected result: XL size appears for all the products.
 
-### Test case nr 10: Test the size and color warning messages for a product on a product page: VerifyRequiredFieldMessageOnProductPageTest
+### Test case nr 14: Test the size and color warning messages for a product on a product page: VerifyRequiredFieldMessageOnProductPageTest
 1. Login with valid credentials.
 2. Go to a product page.
 3. Click add to cart button.

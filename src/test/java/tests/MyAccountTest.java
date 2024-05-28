@@ -17,7 +17,7 @@ public class MyAccountTest extends BaseTest {
         landingPage = landingPage.clickSignIn().login(VALID_EMAIL, VALID_PASSWORD);
     }
     @Test
-    //"Check if new address is successfully added"
+    //Check if new address is successfully added
     public void addNewAddressTest() {
         try {
             AccountPage accountPage = landingPage.clickMyAccountButton();
